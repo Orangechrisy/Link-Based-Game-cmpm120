@@ -1,0 +1,223 @@
+{
+    "Title": "None will intertwine",
+    "Credits": "Created by Christina Katherine Clementine (jctillma@ucsc.edu) (built upon code by Adam Smith (amsmith@ucsc.edu)).",
+    "InitialLocation": "Wake Up",
+    "Locations": {
+        "Wake Up": {
+            "Body": "A new dawn, another day passed, another day holding on. <br/>You awaken wrapped in a thin blanket, barely hanging on to the remnants of your girlfriend's past warmth. <br/>The air is chilly, it's been getting colder lately. You're not sure what you'll do in the coming months.",
+            "Choices": [
+                {
+                    "Text": "Get out of bed",
+                    "Target": "Bedroom"
+                }
+            ]
+        },"Bedroom": {
+            "Body": "You're in your bedroom, or well, your room. Not like there are any others. <br/>The cot you sleep on still has an impression from where your partner was. There's a note that says \"Off to work <3 xx\" <br/>She should be back around 15:00, just gotta fill the void until then. <br/>You really need to get a job soon. Something something \"Not employable\", something something \"Education level\"...",
+            "Choices": [
+                {
+                    "Text": "Gotta get ready before you can start the day",
+                    "Target": "Dresser"
+                },
+                {
+                    "Text": "Who cares how you look, just head out",
+                    "Target": "Slums"
+                }
+            ]
+        },
+        "Dresser": {
+            "Body": "On the wall adjacent to the bed is an old dresser with a mirror on top and some various other things. There's a picture of you and your girlfriend, unframed, tattered edges, taken two years ago. She looks pretty. <br/>Ugh you don't look great, your bra is fraying and threatening to fall off, your hair is a tangled mess, there are purpled bite marks on your neck, and how do you even have eyebags when you don't do much other than lie in bed? <br/>Well, it's you, in all your glory. You throw on a shirt and pants, its the least you could do.",
+            "Choices": [
+                {
+                    "Text": "You've been staring at the mirror for too long.",
+                    "Target": "Bedroom"
+                },
+                {
+                    "Text": "Having a second arm would probably be helpful for today.",
+                    "FurtherText": "A Model XC-7G Hyperfit Arm, much more useful then a stump. \"Hyperfit\" is a lie, it doesn't sit right and it stings when its on, the electrostatic not properly implemented. But its all you can get, a cheap throwaway bought at reseller. <br/>You wish you could get a better one with cybernetics, or even just get a normal arm, but those aren't things you can afford.",
+                    "Unlock": "gotArm"
+                },
+                {
+                    "Text": "Grab the picture",
+                    "FurtherText": "It really is the only thing of importance here. You carefully shove it into a pocket.",
+                    "Lock": "picture"
+                }
+            ]
+        },
+        "Slums": {
+            "Body": "The West Arachon Slums, a pile of metal sheet dwellings and loose structural support. Most places here are one room, if you have any more there might be a fight over it. <br/>If you look up you can see the neon signs of the Upper Levels, that's where the money is. <br/>How long have you been here? 4 years? 5? Shorter than how long you've been with your girl at least. <br/>Suddenly, a man is banging on dwellings while yelling \"They're doing a clean out! Run!\"",
+            "Choices": [
+                {
+                    "Text": "Make sure you got everything important",
+                    "Target": "Bedroom",
+                    "Unlock": "picture"
+                },
+                {
+                    "Text": "Question the man",
+                    "FurtherText": "\"What's going on?\" <br/>\"Cops got an order to run everyone out, think some corp wants the land.\" <br/>\"How long will it be?\" <br/>\"Fuck if I know, but they're lining up on the edges, best run while you can!\""
+                },
+                {
+                    "Text": "Get out before the pigs start moving in",
+                    "Target": "Alleyway 1",
+                    "Lock": "gotArm"
+                }
+            ]
+        },
+        "Alleyway 1": {
+            "Body": "You slip into an alleyway surrounded by larger buildings. It's quieter in there, though the sounds of machines drone on from above. <br/>A few people are moving through, trying to get out of slums like you. But your partner's work is in a different direction, and you need to go tell her.",
+            "Choices": [
+                {
+                    "Text": "Check out the street on the other end of the alleyway",
+                    "Target": "Street 1"
+                },
+                {
+                    "Text": "Head towards your girlfriend's work",
+                    "Target": "Alleyway 2"
+                }
+            ]
+        },
+        "Street 1": {
+            "Body": "It's a small side street, common place for drug deals. <br/>There are a number of dogs sleeping, probably someone's guard dogs, definitely trained to maim. If they wake up they'll wake up everyone around.",
+            "Choices": [
+                {
+                    "Text": "This isn't the way you need to go, head back to the alleyway",
+                    "Target": "Alleyway 1"
+                },
+                {
+                    "Text": "Throw a can at the dogs, wake them up",
+                    "FurtherText": "You throw the cans at some metal next to the dogs, it makes a loud clang. Suddenly the air is filled with the sounds of growling, howling, and yapping. <br/>You can hear police shouting from another street to check it out.",
+                    "Lock": "gotCan",
+                    "Unlock": "guardsLeft"
+                }
+            ]
+        },
+        "Alleyway 2": {
+            "Body": "The alleyway is dirty, there's a number of garbage bins overflowing with cans and other rubbish. <br/>A street to get out of the block is at the end, but people seem to be avoiding it.",
+            "Choices": [
+                {
+                    "Text": "Head back to the other alleyway",
+                    "Target": "Alleyway 1"
+                },
+                {
+                    "Text": "Head to the street, this is the way to your girlfriend's work in the next block over",
+                    "Target": "Street 2"
+                },
+                {
+                    "Text": "Grab a can off the pile, maybe it has some drink left",
+                    "FurtherText": "Nope, it's empty. Might as well keep the can, might be useful.",
+                    "Unlock": "gotCan"
+                }
+            ]
+        },
+        "Street 2": {
+            "Body": "Lonarco Street is a pretty big street, at least by standards in this part of the city. Wide enough for a few speeders to be parked around. <br/>A cop patrol goes through the area, no wonder people aren't trying to get out this way. They will probably try to start moving on the slums soon.",
+            "Choices": [
+                {
+                    "Text": "Head back to the alleyway",
+                    "Target": "Alleyway 2"
+                },
+                {
+                    "Text": "There's a \"conveinience\" store near here, would be good to check out",
+                    "Target": "Convenience Store"
+                },
+                {
+                    "Text": "It's safe for now, cross to get to safety in the next block before its too late",
+                    "Target": "Block 2",
+                    "Lock": "guardsLeft"
+                }
+            ]
+        },
+        "Convenience Store": {
+            "Body": "The ol' Warners+ Quick n' Cheap Mart, part of the massive Warners+ franchise. At least the name is accurate. <br/>The place is a wreck, a mess of stacked boxes, probably expired food, mysterious fluids on the floor. You're pretty sure this place is just an insurance scam anyways.",
+            "Choices": [
+                {
+                    "Text": "Head back to the street, this place makes you feel depressed",
+                    "Target": "Street 2"
+                },
+                {
+                    "Text": "You haven't had food today, might as well take some",
+                    "FurtherText": "You ask the employee manning the register, the only employee of the place, if there's any good food here. <br/>\"There's some probably not stale chips in aisle 4\" pointing further in the store. \"Might have to climb over some boxes though.\" <br/>\"Thanks!\" you reply, and head over. <br/> On the way out you wave goodbye. They give a meager wave back with dead eyes, clearly not caring that you didn't pay. They likely haven't been paid in a month, only still here so they don't get blacklisted."
+                }
+            ]
+        },
+        "Block 2": {
+            "Body": "The Onagoug Block is where your girlfriend works, close by, not as bad as the slums, still on the lowest level. <br/>Most businesses here are owned by the Argon Group in one way or another. Sometimes you'll spot a fancy gilded floating car surrounded by armed guards, for when the higher ups want to do a check on their businesses. <br/>There's a police station near here, also ran by the Argon Group, you've been in and out of it a few times.",
+            "Choices": [
+                {
+                    "Text": "Gotta check where your partner works",
+                    "Target": "Girlfriend's Job"
+                },
+                {
+                    "Text": "You hate the place but it's probably where she's at",
+                    "Target": "Police Station",
+                    "Lock": "talkToCoworker"
+                }
+                
+            ]
+        },
+        "Girlfriend's Job": {
+            "Body": "It's a rundown furniture repair shop, too bad you've just lost the only piece of furniture that you had. <br/>You don't see you're parter around, maybe she's in the back.",
+            "Choices": [
+                {
+                    "Text": "Head back out",
+                    "Target": "Block 2"
+                },
+                {
+                    "Text": "Ask one of her coworkers where she is",
+                    "FurtherText": "You go up to one of them but before you can speak he says \"She didn't come in to work if that's what you're gonna ask.\" <br/>\"She left a note saying she was off to work.\" <br/>\"Maybe something happened to her on the way.\" <br/>A bit of a chill runs down your spine, she probably got grabbed by the police on the way here...",
+                    "Unlock": "talkToCoworker"
+                }
+            ]
+        },
+        "Police Station": {
+            "Body": "The Onagoug Police Station, \"serving\" the community from the only clean structure in the area. The police stations on the upper levels are supposedly even cleaner, somehow. <br/>Last time you were here a guard gave you a black eye and broken nose while trying to force you into a cell. <br/>You want to get away from here.",
+            "Choices": [
+                {
+                    "Text": "You don't want to be here, the main block is nicer",
+                    "Target": "Block 2"
+                },
+                {
+                    "Text": "Try and find a way to the backside of the station",
+                    "Target": "Police Station Backside"
+                }
+            ]
+        },
+        "Police Station Backside": {
+            "Body": "The backside of the station, a mess of metal ladders and stairs, one of the only buildings with a fire escape. <br/>Luckily this side of the building isn't really guarded, seems most of the usual patrol guards are out on their mission to clear out the slums. <br/>You climb up to the second floor, that's where you remember the holding cell to be.",
+            "Choices": [
+                {
+                    "Text": "Go to the front again",
+                    "Target": "Police Station"
+                },
+                {
+                    "Text": "Break in",
+                    "Target": "Police Station Inside"
+                }
+            ]
+        },
+        "Police Station Inside": {
+            "Body": "One hit with your robotic arm and the glass shatters, definitely one of the few advantages to not having a arm made of flesh. Hopefully no one heard that. <br/>You step inside and start walking through the halls, cells line the walls with people in them, most sleeping. The ones who are awake know better than to shout and potentially alert the guards. <br/>A few of them reach out at you, hoping for salvation. But you can't save them all, you're here for one person and you won't have time to do any more. <br/> It weighs on you that you can't do any more.",
+            "Choices": [
+                {
+                    "Text": "A familiar sight",
+                    "FurtherText": "A young dirty person is sleeping in a cell, the cell hasn't changed much since last time. You can still see the dent in the wall you made with the one hand they couldn't take away. <br/>A bad time, you want to leave."
+                },
+                {
+                    "Text": "Just a bit further",
+                    "Target": "Holding Cell"
+                }
+            ]
+        },
+        "Holding Cell": {
+            "Body": "You come up to the holding cell, there's a few people in it. But in one corner is the only one you care about. <br/>Your girlfriend quickly moves to the bars grabs your hand, tears in her eyes. \"I'm here,\" is all you can manage to say. <br/>The other useful aspect of your arm: Can help to break locks. Luckily they have a pretty rudimentary lock, you hit the side of it repeatedly until you can just pull the lock open. <br/>Almost immediately the door is swung open and you're being warmly hugged. You hug her back, and the whispered words of \"I love you\" go back and forth. <br/>Outside of your hug, the others in the holding cell stream out, one heads down the hall, seeing if they can break or pick open any of the locks. Two others head towards the front, clearly intent on bashing some heads if they can.",
+            "Choices": [
+                {
+                    "Text": "Now, all that's left is to run before the guards get here",
+                    "Target": "Escape"
+                }
+            ]
+        },
+        "Escape": {
+            "Body": "You make your way, hand in hand, back out of the hallway. People around you are beginning to get more rowdy, but you just need to get out. <br/>Once you're out and you've run far enough and you're out of breath, finally you can have a moment of rest. The situation catches back up to you. <br/>You and her are left now, unable to go back home, only a picture, a robotic arm, and the clothes on your back to your name. But, you still have each other. <br/>You still have each other. <br/>"
+        }
+    }
+}
